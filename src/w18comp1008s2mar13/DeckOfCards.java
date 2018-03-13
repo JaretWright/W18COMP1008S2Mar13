@@ -23,6 +23,11 @@ public class DeckOfCards {
         }
     }
     
+    public Card dealTopCard()
+    {
+        return this.deck.remove(0);
+    }
+    
     public void displayDeck()
     {
         for (Card card:deck)

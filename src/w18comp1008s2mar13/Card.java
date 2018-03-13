@@ -19,8 +19,32 @@ public class Card {
         setFaceName(faceName);
         setSuit(suit);
         setFaceValue();
+        setCardImage(new Image(getImageFileName()));
     }
 
+    public Image getCardImage()
+    {
+        return cardImage;
+    }
+
+    public void setCardImage(Image cardImage)
+    {
+        this.cardImage = cardImage;
+    }
+    
+    
+    
+    /**
+     * This method will return a String with the location and name of the file
+     * that has an image for the Card object
+     * @return 
+     */
+    public String getImageFileName()
+    {
+        return String.format("./images/%s_of_%s.png", getFaceName(), getSuit());
+    }
+    
+    
     public String getFaceName() {
         return faceName;
     }
